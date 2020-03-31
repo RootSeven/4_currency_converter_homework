@@ -4,7 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: '#app',
     data: {
-      exchangeRates: {}
+      exchangeRates: {},
+      currencyAmount: 0,
+      chosenCurrency: ""
+    },
+    computed: {
+      calculatedEquivalent: function() {
+        return ;
+      }
     },
     mounted(){
         this.fetchExchangeRates();

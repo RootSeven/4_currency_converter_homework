@@ -8,7 +8,29 @@
 </head>
 <body>
     
-    <div id="app"></div>
+    <div id="app">
+
+        <h1>Currency Converter</h1>
+
+        <input type="number" v-model="currencyAmount">
+        <label for="currency-amount">euros</label>
+
+        <p v-if="chosenCurrency != '' ">{{ calculatedEquivalent }}</p>
+        <select id="currency-select" v-model="chosenCurrency" >
+            <option disabled value="">Select a currency</option>
+            <option v-for="(exchangeRate, currency) in exchangeRates.rates" :value="currency">{{ currency }}</option>
+        </select>
+        <br><br>
+
+        <details>
+        <summary>Raw Exchange Rates</summary>
+        <p>1 euro =</p>
+        <div id="all-rates" v-for="(exchangeRate, currency) in exchangeRates.rates">
+            {{ currency }}: {{ exchangeRate }}
+        </div>  
+        </details>
+
+    </div>
 
 </body>
 </html>
