@@ -12,9 +12,11 @@
 
         <h1>Currency Converter</h1>
 
-        <input type="number" v-model="currencyAmount">
-        <label for="currency-amount">euros</label>
+        <input type="number" v-model.number="eurosAmount">
+        <label for="euros-currency-amount">euros</label>
+        <br><br>
 
+        <input type="number" v-model.number="otherAmount">
         <p v-if="chosenCurrency != '' ">{{ calculatedEquivalent }}</p>
         <select id="currency-select" v-model="chosenCurrency" >
             <option disabled value="">Select a currency</option>
