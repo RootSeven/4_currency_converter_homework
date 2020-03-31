@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
       chosenCurrency: ""
     },
     computed: {
-      calculatedEquivalent: function() {
-        return ;
+      eurosToOther: function() {
+        return "hi";
       }
     },
     mounted(){

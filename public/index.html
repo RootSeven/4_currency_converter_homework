@@ -16,8 +16,7 @@
         <label for="euros-currency-amount">euros</label>
         <br><br>
 
-        <input type="number" v-model.number="otherAmount">
-        <p v-if="chosenCurrency != '' ">{{ calculatedEquivalent }}</p>
+        <p></p>
         <select id="currency-select" v-model="chosenCurrency" >
             <option disabled value="">Select a currency</option>
             <option v-for="(exchangeRate, currency) in exchangeRates.rates" :value="currency">{{ currency }}</option>
